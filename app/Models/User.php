@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Country;
 
 class User extends Authenticatable
 {
@@ -19,9 +20,11 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
-        'email',
-        'password',
+        'country_id',
+        'date_of_birth'
     ];
+
+    
 
     /**
      * The attributes that should be hidden for serialization.
@@ -41,4 +44,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function country() {
+        return $this->belongsTo(\App\Models\Country::class, 'country_id');
+    }
 }

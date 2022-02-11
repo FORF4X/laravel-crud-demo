@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Ultra&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+section {
+    display: flex;
+    align-items: center;
+}
+
+.left_panel--container {
+    background-image: url(img/bg.png);
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.left_panel {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 1.5rem;
+}
+
+.left_panel--title h1 {
+    color: #0f6048;
+    font-size: 3em;
+}
+
+.left_panel--content {
+    padding: 2.5rem;
+}
+
+.left_panel--content p {
+    color: #fff;
+    font-size: 1.25em;
+}
+
+.right_panel--container {
+    background-color: grey;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.right_panel {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right_panel--title h1 {
+    color: #58af9b;
+    font-size: 3em;
+}
+
+form {
+    padding: 2rem;
+}
+
+.input {
+    padding: .75rem;
+}
+
+input,
+.country_container select {
+    padding: .75rem 1rem;
+    border-radius: 8px;
+    border-style: none;
+    background-color: #e1f8f6;
+    font-family: 'Noto Sans', sans-serif;
+    width: 100%;
+}
+
+input::placeholder {
+    color: black;
+}
+
+.btn_container input {
+    background-image: linear-gradient(to top right, #0f6048, #58af9b);
+    color: #fff;
+    width: 100%;
+    cursor: pointer;
+}
+.warning {
+    color: red;
+}
